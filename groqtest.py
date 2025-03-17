@@ -1,4 +1,3 @@
-GROQ_API_KEY = "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"  # 🔥 Replace this with your actual API key
 import os
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
@@ -10,7 +9,7 @@ from groq import Groq
 app = FastAPI()
 
 # Load Groq API Key from environment variables
-#GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 if not GROQ_API_KEY:
     raise ValueError("Please set the GROQ_API_KEY environment variable.")
 
